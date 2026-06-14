@@ -1,0 +1,71 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Animated DSA learning lab banner</title>
+  <desc id="desc">A dark grid with animated algorithm paths, array cells, and a glowing DSA Lab title.</desc>
+  <style>
+    .grid { stroke: #233142; stroke-width: 1; opacity: .55; }
+    .path { stroke-dasharray: 18 18; animation: dash 10s linear infinite; }
+    .pulse { animation: pulse 2.8s ease-in-out infinite; transform-origin: center; }
+    .pulse2 { animation: pulse 3.4s ease-in-out infinite; transform-origin: center; animation-delay: .7s; }
+    .float { animation: float 5s ease-in-out infinite; }
+    .float2 { animation: float 6.5s ease-in-out infinite; animation-delay: .5s; }
+    .scan { animation: scan 4.5s ease-in-out infinite; }
+    @keyframes dash { to { stroke-dashoffset: -144; } }
+    @keyframes pulse {
+      0%, 100% { opacity: .45; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.18); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes scan {
+      0% { transform: translateX(-120px); opacity: 0; }
+      18%, 75% { opacity: .65; }
+      100% { transform: translateX(920px); opacity: 0; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101820"/>
+      <stop offset=".48" stop-color="#182B35"/>
+      <stop offset="1" stop-color="#203A3E"/>
+    </linearGradient>
+    <linearGradient id="line" x1="130" y1="96" x2="1000" y2="268" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7DD3FC"/>
+      <stop offset=".5" stop-color="#F9D65C"/>
+      <stop offset="1" stop-color="#57CC99"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
+  <g>
+    <path class="grid" d="M80 40V320M160 40V320M240 40V320M320 40V320M400 40V320M480 40V320M560 40V320M640 40V320M720 40V320M800 40V320M880 40V320M960 40V320M1040 40V320M1120 40V320"/>
+    <path class="grid" d="M40 80H1160M40 140H1160M40 200H1160M40 260H1160M40 320H1160"/>
+  </g>
+  <path class="path" d="M120 250C210 120 280 305 370 170C455 42 548 256 640 146C740 28 816 286 930 115C1004 4 1058 180 1110 88" stroke="url(#line)" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+  <rect class="scan" x="170" y="72" width="110" height="216" rx="55" fill="#7DD3FC" opacity=".22"/>
+  <g class="float">
+    <rect x="130" y="118" width="78" height="58" rx="10" fill="#12212B" stroke="#7DD3FC" stroke-width="2"/>
+    <text x="169" y="154" text-anchor="middle" font-family="Consolas, monospace" font-size="22" fill="#E8F7FF">01</text>
+  </g>
+  <g class="float2">
+    <rect x="230" y="184" width="78" height="58" rx="10" fill="#12212B" stroke="#F9D65C" stroke-width="2"/>
+    <text x="269" y="220" text-anchor="middle" font-family="Consolas, monospace" font-size="22" fill="#FFF6CC">02</text>
+  </g>
+  <g class="float">
+    <rect x="330" y="118" width="78" height="58" rx="10" fill="#12212B" stroke="#57CC99" stroke-width="2"/>
+    <text x="369" y="154" text-anchor="middle" font-family="Consolas, monospace" font-size="22" fill="#D7FFE9">03</text>
+  </g>
+  <circle class="pulse" cx="742" cy="102" r="9" fill="#F9D65C" filter="url(#glow)"/>
+  <circle class="pulse2" cx="910" cy="238" r="11" fill="#7DD3FC" filter="url(#glow)"/>
+  <circle class="pulse" cx="1042" cy="150" r="8" fill="#57CC99" filter="url(#glow)"/>
+  <text x="590" y="168" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="66" font-weight="800" fill="#F6FAF8" letter-spacing="2">DSA LAB</text>
+  <text x="594" y="213" font-family="Consolas, monospace" font-size="24" fill="#B7C7C9">math -> lists -> recursion -> patterns</text>
+  <text x="594" y="254" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#DCE7E3">An evolving notebook-first playground for algorithm practice.</text>
+</svg>
