@@ -1,2 +1,1 @@
-def reverseSt(l):
-    re = reversed(l)
+print(fac(5))

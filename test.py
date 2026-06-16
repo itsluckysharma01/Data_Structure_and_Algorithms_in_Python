@@ -1,2 +1,3 @@
-## Left Rotate list by one 
 
+
+## Sum of Digit 234 ans = 9
