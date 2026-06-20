@@ -1,3 +1,17 @@
+## IP = abbabba    geeks     abba
+##  yes             no         Yes
+
+def match(n):
+
+    for i in n:
+        while a>b:
+            if a == b:
+                return True
+            a = a+1
+            b = b-1
+            
+
+        
 
 
-## Sum of Digit 234 ans = 9
+print(match("abbba"))
